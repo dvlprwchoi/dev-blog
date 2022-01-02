@@ -6,13 +6,13 @@ function Header() {
       <div className="header-title">
         <h1>DEV BLOG</h1>
       </div>
-      <div className="navbar">
-        <nav>
-          <Link to="/">Home</Link>
-          <Link to="/login">Login</Link>
-          <Link to="/create">Create Post</Link>
-        </nav>
-      </div>
+      {/* <div className="navbar"> */}
+      <nav className="navbar">
+        <Link to="/">Home</Link>
+        <Link to="/login">Login</Link>
+        <Link to="/create">Create Post</Link>
+      </nav>
+      {/* </div> */}
     </div>
   );
 }
