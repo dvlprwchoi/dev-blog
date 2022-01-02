@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-function Header() {
+function Header({ isAuth, _logout }) {
   return (
     <div className="header">
       <div className="header-title">
@@ -9,8 +9,14 @@ function Header() {
       {/* <div className="navbar"> */}
       <nav className="navbar">
         <Link to="/">Home</Link>
-        <Link to="/login">Login</Link>
-        <Link to="/create">Create Post</Link>
+        {!isAuth ? (
+          <Link to="/login">Log In</Link>
+        ) : (
+          <button className="logout-button button" onClick={_logout}>
+            Log Out
+          </button>
+        )}
+        {isAuth && <Link to="/create">Create Post</Link>}
       </nav>
       {/* </div> */}
     </div>
