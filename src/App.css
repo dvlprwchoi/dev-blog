@@ -47,6 +47,11 @@
   text-decoration: none;
   color: var(--color-5);
 }
+
+.button {
+  cursor: pointer;
+}
+
 /* .App {
   text-align: center;
 }
