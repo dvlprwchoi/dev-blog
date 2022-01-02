@@ -1,7 +1,52 @@
 * {
-  border: 1px solid black;
+  /* border: 1px solid black; */
+  font-size: calc(10px + 2vmin);
 }
 
+[theme='a'] {
+  --color: #45333a;
+  --color-2: #825b4a;
+  --color-3: #a29e8e;
+  --color-4: #eee6e2;
+  --color-5: #6d692f;
+}
+
+.App {
+  background-color: var(--color);
+}
+
+.header-title h1 {
+  color: var(--color-4);
+  text-align: center;
+  font-size: calc(15px + 3vmin);
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 3%;
+}
+
+.navbar a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  padding: 3%;
+  background-color: var(--color-5);
+  color: var(--color-4);
+}
+
+.footer {
+  color: var(--color-4);
+  text-align: center;
+}
+
+.portfolio-link {
+  text-decoration: none;
+  color: var(--color-5);
+}
 /* .App {
   text-align: center;
 }
