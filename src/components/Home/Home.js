@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../../firebase-config';
+import './Home.css';
 
 function Home() {
   const [postList, setPostList] = useState([]);

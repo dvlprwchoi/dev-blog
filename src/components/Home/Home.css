@@ -1,0 +1,26 @@
+.home {
+  display: flex;
+  gap: 0.5vw;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.single-post-container {
+  background-color: var(--color-5);
+  width: clamp(280px, 20%, 1000px);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1vw;
+}
+
+.single-post-title h2 {
+  color: var(--color-4);
+  text-align: left;
+  font-size: calc(13px + 2vmin);
+}
+
+.single-post-author-name h3 {
+  color: var(--color-1);
+  text-align: right;
+  font-size: calc(10px + 1.2vmin);
+}

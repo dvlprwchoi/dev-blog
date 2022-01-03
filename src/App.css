@@ -54,6 +54,11 @@
   border-radius: 1rem 0.5rem;
 }
 
+.main {
+  padding-left: 3vw;
+  padding-right: 3vw;
+}
+
 .create-title {
   padding-left: 3vw;
   padding-right: 3vw;
