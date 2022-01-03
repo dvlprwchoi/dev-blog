@@ -7,10 +7,21 @@
 
 .single-post-container {
   background-color: var(--color-5);
-  width: clamp(280px, 20%, 1000px);
+  width: clamp(280px, 20%, 1200px);
   border: none;
   border-radius: 0.5rem;
   padding: 1vw;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  /* max-height: 70vh; */
+}
+
+.single-post-text {
+  word-wrap: break-word;
+  /* height: auto; */
+  max-height: 30vh;
+  /* width: 100%; */
+  overflow: scroll;
+  overflow-y: auto;
 }
 
 .single-post-title h2 {
@@ -23,4 +34,15 @@
   color: var(--color-1);
   text-align: right;
   font-size: calc(10px + 1.2vmin);
+}
+
+.delete-button-div {
+  text-align: right;
+}
+
+.delete-button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: calc(13px + 2vmin);
 }
