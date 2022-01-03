@@ -11,8 +11,13 @@
   --color-5: #6d692f;
 }
 
+#root {
+  display: flex;
+  justify-content: center;
+}
 .App {
   background-color: var(--color);
+  width: clamp(350px, 99%, 1000px);
 }
 
 .header-title h1 {
@@ -36,6 +41,48 @@
   padding: 3%;
   background-color: var(--color-5);
   color: var(--color-4);
+  border-radius: 1rem 0.5rem;
+}
+
+.create-title {
+  padding-left: 3vw;
+  padding-right: 3vw;
+}
+
+.create-title h2 {
+  color: var(--color-3);
+  text-align: left;
+  font-size: calc(13px + 2vmin);
+}
+
+.create-post-inputs {
+  padding-left: 3vw;
+  padding-right: 3vw;
+}
+
+.input-title-div,
+.input-text-div {
+  color: var(--color-3);
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+  padding: 1vw;
+}
+
+.post-title-input-box,
+.post-text-input-area {
+  width: 95%;
+  padding: 1vw;
+  border: none;
+}
+
+.post-text-input-area {
+  height: 20vh;
+}
+
+.submit-button-div {
+  padding: 1vw;
+  text-align: right;
 }
 
 .footer {
@@ -46,10 +93,16 @@
 .portfolio-link {
   text-decoration: none;
   color: var(--color-5);
+  font-weight: bolder;
 }
 
 .button {
+  padding: 3%;
+  background-color: var(--color-5);
+  color: var(--color-4);
   cursor: pointer;
+  border: none;
+  border-radius: 1rem 0.5rem;
 }
 
 /* .App {
