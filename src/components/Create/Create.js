@@ -1,4 +1,27 @@
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { addDoc, collection } from 'firebase/firestore';
+import { db, auth } from '../../firebase-config';
+
 function Create() {
+  const [title, setTitle] = useState('');
+  const [postText, setPostText] = useState('');
+
+  const postsCollectionServer = collection(db, 'posts');
+
+  let navigate = useNavigate();
+
+  const _create = async () => {
+    await addDoc(postsCollectionServer, {
+      title,
+      postText,
+      authorName: auth.currentUser.displayName,
+      authorId: auth.currentUser.uid,
+    });
+    navigate('/');
+  };
+
+  console.log(title, postText);
   return (
     <div className="create main">
       <div className="create-title">
@@ -14,6 +37,7 @@ function Create() {
               name="title"
               placeholder="Add title..."
               required
+              onChange={(e) => setTitle(e.target.value)}
             />
           </div>
           <div className="input-text-div">
@@ -23,10 +47,13 @@ function Create() {
               name="post"
               placeholder="Add post..."
               required
+              onChange={(e) => setPostText(e.target.value)}
             ></textarea>
           </div>
           <div className="submit-button-div">
-            <button className="submit-button button">Submit</button>
+            <button className="submit-button button" onSubmit={_create}>
+              Submit
+            </button>
           </div>
         </form>
       </div>
