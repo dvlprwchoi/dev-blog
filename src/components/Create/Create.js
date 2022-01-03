@@ -27,7 +27,7 @@ function Create({ isAuth }) {
     }
   }, []);
 
-  console.log(title, postText);
+  // console.log(title, postText);
   return (
     <div className="create main">
       <div className="create-title">

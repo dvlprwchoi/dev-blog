@@ -10,7 +10,7 @@ import { signOut } from 'firebase/auth';
 import { auth } from './firebase-config';
 
 function App() {
-  const [isAuth, setIsAuth] = useState(false);
+  const [isAuth, setIsAuth] = useState(localStorage.getItem('isAuth'));
 
   const _logout = () => {
     signOut(auth).then(() => {
@@ -25,7 +25,7 @@ function App() {
       <Router>
         <Header isAuth={isAuth} _logout={_logout} />
         <Routes>
-          <Route exact path="/" element={<Home />} />
+          <Route exact path="/" element={<Home isAuth={isAuth} />} />
           <Route
             exact
             path="/login"
