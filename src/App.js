@@ -21,7 +21,7 @@ function App() {
   };
 
   return (
-    <div className="App" theme="b">
+    <div className="App" theme="a">
       <Router>
         <Header isAuth={isAuth} _logout={_logout} />
         <Routes>
