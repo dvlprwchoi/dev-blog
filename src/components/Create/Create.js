@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { addDoc, collection } from 'firebase/firestore';
 import { db, auth } from '../../firebase-config';
 
-function Create() {
+function Create({ isAuth }) {
   const [title, setTitle] = useState('');
   const [postText, setPostText] = useState('');
 
@@ -28,34 +28,36 @@ function Create() {
         <h2>Create a post</h2>
       </div>
       <div className="create-post-inputs">
-        <form>
-          <div className="input-title-div">
-            <label htmlFor="title">Title: </label>
-            <input
-              className="post-title-input-box"
-              type="text"
-              name="title"
-              placeholder="Add title..."
-              required
-              onChange={(e) => setTitle(e.target.value)}
-            />
-          </div>
-          <div className="input-text-div">
-            <label htmlFor="post">Post: </label>
-            <textarea
-              className="post-text-input-area"
-              name="post"
-              placeholder="Add post..."
-              required
-              onChange={(e) => setPostText(e.target.value)}
-            ></textarea>
-          </div>
-          <div className="submit-button-div">
-            <button className="submit-button button" onSubmit={_create}>
+        {/* <form> */}
+        <div className="input-title-div">
+          <label htmlFor="title">Title: </label>
+          <input
+            className="post-title-input-box"
+            type="text"
+            name="title"
+            placeholder="Add title..."
+            required
+            onChange={(e) => setTitle(e.target.value)}
+          />
+        </div>
+        <div className="input-text-div">
+          <label htmlFor="post">Post: </label>
+          <textarea
+            className="post-text-input-area"
+            name="post"
+            placeholder="Add post..."
+            required
+            onChange={(e) => setPostText(e.target.value)}
+          ></textarea>
+        </div>
+        <div className="submit-button-div">
+          {isAuth && (
+            <button className="submit-button button" onClick={_create}>
               Submit
             </button>
-          </div>
-        </form>
+          )}
+        </div>
+        {/* </form> */}
       </div>
     </div>
   );
