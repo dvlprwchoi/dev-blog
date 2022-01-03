@@ -1,6 +1,7 @@
 * {
   /* border: 1px solid black; */
   font-size: calc(10px + 2vmin);
+  font-family: 'Exo', sans-serif;
 }
 
 [theme='a'] {
@@ -11,10 +12,19 @@
   --color-5: #6d692f;
 }
 
+[theme='b'] {
+  --color: #eee6e2;
+  --color-2: #a29e8e;
+  --color-3: #6d692f;
+  --color-4: #13160d;
+  --color-5: #45333a94;
+}
+
 #root {
   display: flex;
   justify-content: center;
 }
+
 .App {
   background-color: var(--color);
   width: clamp(350px, 99%, 1000px);
