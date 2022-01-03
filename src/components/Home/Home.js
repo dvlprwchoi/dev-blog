@@ -1,11 +1,17 @@
 import { useEffect, useState } from 'react';
-import { collection, getDocs } from 'firebase/firestore';
-import { db } from '../../firebase-config';
+import { collection, deleteDoc, doc, getDocs } from 'firebase/firestore';
+import { auth, db } from '../../firebase-config';
 import './Home.css';
 
-function Home() {
+function Home({ isAuth }) {
   const [postList, setPostList] = useState([]);
   const postsCollectionServer = collection(db, 'posts');
+
+  const _delete = async (id) => {
+    const findPostById = doc(db, 'posts', id);
+    await deleteDoc(findPostById);
+    window.location.pathname = '/';
+  };
 
   useEffect(() => {
     const getPosts = async () => {
@@ -31,6 +37,18 @@ function Home() {
             <div className="single-post-text">{post.postText}</div>
             <div className="single-post-author-name">
               <h3>{post.authorName}</h3>
+            </div>
+            <div className="delete-button-div">
+              {isAuth && post.authorId === auth.currentUser.uid && (
+                <button
+                  className="delete-button icon"
+                  onClick={() => {
+                    _delete(post.id);
+                  }}
+                >
+                  &#128465;
+                </button>
+              )}
             </div>
           </div>
         );
