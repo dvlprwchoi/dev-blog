@@ -15,12 +15,18 @@
   /* max-height: 70vh; */
 }
 
+/* .single-post-text::-webkit-scrollbar {
+  display: none;
+} */
+
 .single-post-text {
   word-wrap: break-word;
   /* height: auto; */
   max-height: 30vh;
   /* width: 100%; */
   overflow: hidden;
+  -ms-overflow-style: none;
+  /* scrollbar-width: none; */
   overflow-y: auto;
   font-size: calc(10px + 1vmin);
 }
