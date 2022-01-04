@@ -20,7 +20,7 @@
   /* height: auto; */
   max-height: 30vh;
   /* width: 100%; */
-  overflow: scroll;
+  overflow: hidden;
   overflow-y: auto;
 }
 
