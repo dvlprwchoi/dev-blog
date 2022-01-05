@@ -4,33 +4,45 @@ DEV BLOG is a developer's blog platform. A user can login with a Gmail account. 
 
 # Previews
 
-## Mobile
+## Mobile view (iPhone 8)
+<p align = 'center'>
+<img align='center' src='https://raw.githubusercontent.com/dvlprwchoi/dev-blog/main/src/img/iphone-8-screenshot-20220104.png' alt='Landing page on mobile' />
+Landing page
+<img align='center' src='https://raw.githubusercontent.com/dvlprwchoi/dev-blog/main/src/img/mobile-create-view-screenshot-20220104.png' alt='Create page on mobile' />
+Create page
+</p>
 
-- iPhone 8 landing page view
-  ![iPhone 8](https://raw.githubusercontent.com/dvlprwchoi/dev-blog/main/src/img/iphone-8-screenshot-20220104.png)
 
-- iPhone 8 create page view
-  ![Mobile Create](https://raw.githubusercontent.com/dvlprwchoi/dev-blog/main/src/img/mobile-create-view-screenshot-20220104.png)
 
-## Desktop
+## Desktop view
+<p align = 'left'>
+<img align = 'center' src='https://raw.githubusercontent.com/dvlprwchoi/dev-blog/main/src/img/desktop-login-view-screenshot-20220104.png' width='50%' alt='Login page on desktop' />
+  Login page
+<br>
+<img align = 'center' src='https://raw.githubusercontent.com/dvlprwchoi/dev-blog/main/src/img/desktop-google-view-screenshot-20220104.png' width='50%' alt='Google sign in page on desktop' />
+  Google sign in
+</p>
 
-- Different screen size view (Responsive design)
-  ![Desktop Different Screen Size](https://raw.githubusercontent.com/dvlprwchoi/dev-blog/main/src/img/different-size-screenshot-20220104.png)
+<hr>
 
-- Desktop landing page view
-  ![Desktop Landing](https://raw.githubusercontent.com/dvlprwchoi/dev-blog/main/src/img/desktop-landing-view-screenshot-20220104.png)
+<p align = 'left'>
+<img align = 'center' src='https://raw.githubusercontent.com/dvlprwchoi/dev-blog/main/src/img/desktop-create-view-screenshot-20220104.png' width='50%' alt='Create post page on desktop' />
+Create page
+<br>
+<img align = 'center' src='https://raw.githubusercontent.com/dvlprwchoi/dev-blog/main/src/img/desktop-login-delete-view-screenshot-20220104.png' width='50%' alt='Delete page on desktop' />
+  Delete post icon (Trash can) for user's post
+</p>
 
-- Desktop login page view
-  ![Desktop Login View](https://raw.githubusercontent.com/dvlprwchoi/dev-blog/main/src/img/desktop-login-view-screenshot-20220104.png)
+<hr>
 
-- Desktop Google sign in view
-  ![Desktop Google Sign In](https://raw.githubusercontent.com/dvlprwchoi/dev-blog/main/src/img/desktop-google-view-screenshot-20220104.png)
+<p align = 'left'>
+<img align = 'center' src='https://raw.githubusercontent.com/dvlprwchoi/dev-blog/main/src/img/desktop-landing-view-screenshot-20220104.png' width='50%' alt='Landing page on desktop' />
+Landing page
+<br>
+<img align = 'center' src='https://raw.githubusercontent.com/dvlprwchoi/dev-blog/main/src/img/different-size-screenshot-20220104.png' width='50%' alt='Different screen size view on desktop' />
+  Different screen size view (Responsive design)
+</p>
 
-- Desktop create page view
-  ![Desktop Create](https://raw.githubusercontent.com/dvlprwchoi/dev-blog/main/src/img/desktop-create-view-screenshot-20220104.png)
-
-- Desktop delete page view (Trash can icons)
-  ![Desktop Delete](https://raw.githubusercontent.com/dvlprwchoi/dev-blog/main/src/img/desktop-login-delete-view-screenshot-20220104.png)
 
 # Technologies used
 
