@@ -6,17 +6,19 @@ DEV BLOG is a developer's blog platform. A user can login with a Gmail account. 
 
 ## Mobile
 
-![iPhone 8](https://raw.githubusercontent.com/dvlprwchoi/dev-blog/src/img/iphone-8-screenshot-20220104.png)
-![Mobile Create](https://raw.githubusercontent.com/dvlprwchoi/dev-blog/src/img/mobile-create-view-screenshot-20220104.png)
+/Users/wchoi/Desktop/personal-projects/dev-blog/main/src/img/iphone-8-screenshot-20220104.png
+src/img/iphone-8-screenshot-20220104.png
+![iPhone 8](https://raw.githubusercontent.com/dvlprwchoi/dev-blog/main/src/img/iphone-8-screenshot-20220104.png)
+![Mobile Create](https://raw.githubusercontent.com/dvlprwchoi/dev-blog/main/src/img/mobile-create-view-screenshot-20220104.png)
 
 ## Desktop
 
-![Desktop Different Screen Size](https://raw.githubusercontent.com/dvlprwchoi/dev-blog/src/img/different-size-screenshot-20220104.png)
-![Desktop Landing](https://raw.githubusercontent.com/dvlprwchoi/dev-blog/src/img/desktop-landing-view-screenshot-20220104.png)
-![Desktop Create](https://raw.githubusercontent.com/dvlprwchoi/dev-blog/src/img/desktop-create-view-screenshot-20220104.png)
-![Desktop Google Sign In](https://raw.githubusercontent.com/dvlprwchoi/dev-blog/src/img/desktop-google-view-screenshot-20220104.png)
-![Desktop Login View](https://raw.githubusercontent.com/dvlprwchoi/dev-blog/src/img/desktop-login-view-screenshot-20220104.png)
-![Desktop Delete](https://raw.githubusercontent.com/dvlprwchoi/dev-blog/src/img/desktop-login-delete-view-screenshot-20220104.png)
+![Desktop Different Screen Size](https://raw.githubusercontent.com/dvlprwchoi/dev-blog/main/src/img/different-size-screenshot-20220104.png)
+![Desktop Landing](https://raw.githubusercontent.com/dvlprwchoi/dev-blog/main/src/img/desktop-landing-view-screenshot-20220104.png)
+![Desktop Create](https://raw.githubusercontent.com/dvlprwchoi/dev-blog/main/src/img/desktop-create-view-screenshot-20220104.png)
+![Desktop Google Sign In](https://raw.githubusercontent.com/dvlprwchoi/dev-blog/main/src/img/desktop-google-view-screenshot-20220104.png)
+![Desktop Login View](https://raw.githubusercontent.com/dvlprwchoi/dev-blog/main/src/img/desktop-login-view-screenshot-20220104.png)
+![Desktop Delete](https://raw.githubusercontent.com/dvlprwchoi/dev-blog/main/src/img/desktop-login-delete-view-screenshot-20220104.png)
 
 # Technologies used
 
