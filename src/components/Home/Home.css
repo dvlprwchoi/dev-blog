@@ -43,13 +43,24 @@
   font-size: calc(10px + 1.2vmin);
 }
 
-.delete-button-div {
+.icon-div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.delete-button-div,
+.edit-button-div {
   text-align: right;
 }
 
-.delete-button {
+.delete-button,
+.edit-button {
   border: none;
   background: none;
   cursor: pointer;
   font-size: calc(13px + 2vmin);
+}
+
+.edit-button {
+  transform: rotateY(3.142rad);
 }
