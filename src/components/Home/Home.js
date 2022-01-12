@@ -13,6 +13,10 @@ function Home({ isAuth }) {
     window.location.pathname = '/';
   };
 
+  const _edit = async (id) => {
+    console.log('edit');
+  };
+
   useEffect(() => {
     const getPosts = async () => {
       const data = await getDocs(postsCollectionServer);
@@ -38,17 +42,31 @@ function Home({ isAuth }) {
             <div className="single-post-author-name">
               <h3>{post.authorName}</h3>
             </div>
-            <div className="delete-button-div">
-              {isAuth && post.authorId === auth.currentUser.uid && (
-                <button
-                  className="delete-button icon"
-                  onClick={() => {
-                    _delete(post.id);
-                  }}
-                >
-                  &#128465;
-                </button>
-              )}
+            <div className="icon-div">
+              <div className="delete-button-div">
+                {isAuth && post.authorId === auth.currentUser.uid && (
+                  <button
+                    className="delete-button icon"
+                    onClick={() => {
+                      _delete(post.id);
+                    }}
+                  >
+                    &#128465;
+                  </button>
+                )}
+              </div>
+              <div className="edit-button-div">
+                {isAuth && post.authorId === auth.currentUser.uid && (
+                  <button
+                    className="edit-button icon"
+                    onClick={() => {
+                      _edit(post.id);
+                    }}
+                  >
+                    &#9998;
+                  </button>
+                )}
+              </div>
             </div>
           </div>
         );

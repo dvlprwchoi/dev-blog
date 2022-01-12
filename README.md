@@ -5,6 +5,7 @@ DEV BLOG is a developer's blog platform. A user can login with a Gmail account. 
 # Previews
 
 ## Mobile view (iPhone 8)
+
 <p align = 'center'>
 <img align='center' src='https://raw.githubusercontent.com/dvlprwchoi/dev-blog/main/src/img/iphone-8-screenshot-20220104.png' alt='Landing page on mobile' />
 Landing page
@@ -12,9 +13,8 @@ Landing page
 Create page
 </p>
 
-
-
 ## Desktop view
+
 <p align = 'left'>
 <img align = 'center' src='https://raw.githubusercontent.com/dvlprwchoi/dev-blog/main/src/img/desktop-login-view-screenshot-20220104.png' width='50%' alt='Login page on desktop' />
   Login page
@@ -42,7 +42,6 @@ Landing page
 <img align = 'center' src='https://raw.githubusercontent.com/dvlprwchoi/dev-blog/main/src/img/different-size-screenshot-20220104.png' width='50%' alt='Different screen size view on desktop' />
   Different screen size view (Responsive design)
 </p>
-
 
 # Technologies used
 
@@ -91,7 +90,7 @@ Your site is now running at `http://localhost:3000`!
 ## Future plan
 
 - Add comment section
-- Add different color theme
+- Add different color theme &#9989;
 - Add edit post
 - Add delete confirmation
 - Add modal

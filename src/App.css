@@ -36,6 +36,24 @@
   font-size: calc(15px + 3vmin);
 }
 
+.theme-button-div {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.theme-button {
+  position: fixed;
+  padding: 0.2% 1%;
+  margin: 1%;
+  border-radius: 0.3rem;
+  background: none;
+  cursor: pointer;
+  font-size: calc(13px + 2vmin);
+  color: var(--color-4);
+  border: 0.1rem solid var(--color-4);
+}
+
 .navbar {
   display: flex;
   flex-direction: row;
@@ -122,17 +140,20 @@
 }
 
 .button:hover,
-a:hover {
+a:hover,
+.theme-button:hover {
   box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.04), 0 2px 4px rgba(0, 0, 0, 0.25);
 }
 
 .button:active,
-a:active {
+a:active,
+.theme-button:active {
   background-color: #eeeeee;
 }
 
 .button:focus,
-a:focus {
+a:focus,
+.theme-button:focus {
   outline: none;
   box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.04), 0 2px 4px rgba(0, 0, 0, 0.25),
     0 0 0 3px #c8dafc;
