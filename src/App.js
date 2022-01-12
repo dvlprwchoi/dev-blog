@@ -31,7 +31,12 @@ function App() {
   return (
     <div className="App" theme={isDark ? 'a' : 'b'}>
       <Router>
-        <Header isAuth={isAuth} _logout={_logout} _changeTheme={_changeTheme} />
+        <Header
+          isAuth={isAuth}
+          _logout={_logout}
+          _changeTheme={_changeTheme}
+          isDark={isDark}
+        />
         <Routes>
           <Route exact path="/" element={<Home isAuth={isAuth} />} />
           <Route

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-function Header({ isAuth, _logout, _changeTheme }) {
+function Header({ isAuth, _logout, _changeTheme, isDark }) {
   return (
     <div className="header">
       <div className="header-title">
@@ -8,7 +8,7 @@ function Header({ isAuth, _logout, _changeTheme }) {
       </div>
       <div className="theme-button-div">
         <button className="theme-button icon" onClick={_changeTheme}>
-          &#9788;
+          {isDark ? <div>&#9788;</div> : <div>&#9790;</div>}
         </button>
       </div>
       {/* <div className="navbar"> */}
