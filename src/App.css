@@ -36,6 +36,24 @@
   font-size: calc(15px + 3vmin);
 }
 
+.theme-button-div {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.theme-button {
+  position: fixed;
+  padding: 0.2% 1%;
+  margin: 1%;
+  border-radius: 0.3rem;
+  background: none;
+  cursor: pointer;
+  font-size: calc(13px + 2vmin);
+  color: var(--color-4);
+  border: 0.1rem solid var(--color-4);
+}
+
 .navbar {
   display: flex;
   flex-direction: row;
