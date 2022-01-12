@@ -20,10 +20,18 @@ function App() {
     });
   };
 
+  const [isDark, setIsDark] = useState(false);
+
+  const _changeTheme = () => {
+    // console.log('theme');
+    setIsDark(isDark ? false : true);
+  };
+  // console.log(isDark);
+
   return (
-    <div className="App" theme="b">
+    <div className="App" theme={isDark ? 'a' : 'b'}>
       <Router>
-        <Header isAuth={isAuth} _logout={_logout} />
+        <Header isAuth={isAuth} _logout={_logout} _changeTheme={_changeTheme} />
         <Routes>
           <Route exact path="/" element={<Home isAuth={isAuth} />} />
           <Route

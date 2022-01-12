@@ -1,13 +1,15 @@
 import { Link } from 'react-router-dom';
 
-function Header({ isAuth, _logout }) {
+function Header({ isAuth, _logout, _changeTheme }) {
   return (
     <div className="header">
       <div className="header-title">
         <h1>DEV BLOG</h1>
       </div>
       <div className="theme-button-div">
-        <button className="theme-button icon">&#9788;</button>
+        <button className="theme-button icon" onClick={_changeTheme}>
+          &#9788;
+        </button>
       </div>
       {/* <div className="navbar"> */}
       <nav className="navbar">
