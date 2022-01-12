@@ -6,6 +6,9 @@ function Header({ isAuth, _logout }) {
       <div className="header-title">
         <h1>DEV BLOG</h1>
       </div>
+      <div className="theme-button-div">
+        <button className="theme-button icon">&#9788;</button>
+      </div>
       {/* <div className="navbar"> */}
       <nav className="navbar">
         <Link to="/">Home</Link>
