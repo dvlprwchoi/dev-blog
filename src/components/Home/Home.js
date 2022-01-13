@@ -13,8 +13,9 @@ function Home({ isAuth }) {
     window.location.pathname = '/';
   };
 
-  const _edit = async (id) => {
-    console.log('edit');
+  const _editPage = async (id) => {
+    console.log('Move to edit page');
+    window.location.pathname = '/edit';
   };
 
   useEffect(() => {
@@ -60,7 +61,7 @@ function Home({ isAuth }) {
                   <button
                     className="edit-button icon"
                     onClick={() => {
-                      _edit(post.id);
+                      _editPage(post.id);
                     }}
                   >
                     &#9998;
