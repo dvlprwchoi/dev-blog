@@ -14,7 +14,9 @@ function Home({ isAuth }) {
   };
 
   const _editPage = async (id) => {
-    console.log('Move to edit page');
+    // const findPostById = doc(db, 'posts', id);
+    console.log(`Move to ${id} edit page`);
+
     window.location.pathname = '/edit';
   };
 
