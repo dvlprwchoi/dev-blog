@@ -8,6 +8,7 @@ import Create from './components/Create/Create';
 import Footer from './components/Footer/Footer';
 import { signOut } from 'firebase/auth';
 import { auth } from './firebase-config';
+import Edit from './components/Edit/Edit';
 
 function App() {
   const [isAuth, setIsAuth] = useState(localStorage.getItem('isAuth'));
@@ -45,6 +46,7 @@ function App() {
             element={<Login setIsAuth={setIsAuth} />}
           />
           <Route exact path="/create" element={<Create isAuth={isAuth} />} />
+          <Route path="/edit/:id" element={<Edit isAuth={isAuth} />} />
         </Routes>
       </Router>
       <Footer />

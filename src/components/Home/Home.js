@@ -13,8 +13,9 @@ function Home({ isAuth }) {
     window.location.pathname = '/';
   };
 
-  const _edit = async (id) => {
-    console.log('edit');
+  const _editPage = (id) => {
+    // console.log(`Move to ${id} edit page`);
+    window.location.pathname = `/edit/${id}`;
   };
 
   useEffect(() => {
@@ -32,9 +33,9 @@ function Home({ isAuth }) {
   }, []);
   return (
     <div className="home main">
-      {postList.map((post) => {
+      {postList.map((post, index) => {
         return (
-          <div className="single-post-container">
+          <div key={index} className="single-post-container">
             <div className="single-post-title">
               <h2>{post.title}</h2>
             </div>
@@ -60,7 +61,8 @@ function Home({ isAuth }) {
                   <button
                     className="edit-button icon"
                     onClick={() => {
-                      _edit(post.id);
+                      _editPage(post.id);
+                      // console.log(post.id);
                     }}
                   >
                     &#9998;
