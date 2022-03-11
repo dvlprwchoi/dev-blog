@@ -3,11 +3,7 @@ import { collection, deleteDoc, doc, getDocs } from 'firebase/firestore';
 import { auth, db } from '../../firebase-config';
 import './Home.css';
 
-function Home({
-  isAuth,
-  // editPostId,
-  // setEditPostId
-}) {
+function Home({ isAuth }) {
   const [postList, setPostList] = useState([]);
   const postsCollectionServer = collection(db, 'posts');
 
@@ -19,14 +15,8 @@ function Home({
 
   const _editPage = (id) => {
     // console.log(`Move to ${id} edit page`);
-    // setEditPostId(id);
-
-    // console.log(editPostId);
-    window.location.pathname = '/edit';
+    window.location.pathname = `/edit/${id}`;
   };
-  // useEffect(() => {
-  //   console.log(editPostId);
-  // });
 
   useEffect(() => {
     const getPosts = async () => {
@@ -72,6 +62,7 @@ function Home({
                     className="edit-button icon"
                     onClick={() => {
                       _editPage(post.id);
+                      // console.log(post.id);
                     }}
                   >
                     &#9998;
