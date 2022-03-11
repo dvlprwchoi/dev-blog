@@ -12,7 +12,7 @@ import Edit from './components/Edit/Edit';
 
 function App() {
   const [isAuth, setIsAuth] = useState(localStorage.getItem('isAuth'));
-  const [editPostId, setEditPostId] = useState([]);
+  // const [editPostId, setEditPostId] = useState([]);
 
   const _logout = () => {
     signOut(auth).then(() => {
@@ -46,8 +46,8 @@ function App() {
             element={
               <Home
                 isAuth={isAuth}
-                editPostId={editPostId}
-                setEditPostId={setEditPostId}
+                // editPostId={editPostId}
+                // setEditPostId={setEditPostId}
               />
             }
           />
@@ -60,7 +60,12 @@ function App() {
           <Route
             exact
             path="/edit"
-            element={<Edit isAuth={isAuth} editPostId={editPostId} />}
+            element={
+              <Edit
+                isAuth={isAuth}
+                // editPostId={editPostId}
+              />
+            }
           />
         </Routes>
       </Router>

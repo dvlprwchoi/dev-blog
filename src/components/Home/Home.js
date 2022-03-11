@@ -3,7 +3,11 @@ import { collection, deleteDoc, doc, getDocs } from 'firebase/firestore';
 import { auth, db } from '../../firebase-config';
 import './Home.css';
 
-function Home({ isAuth, editPostId, setEditPostId }) {
+function Home({
+  isAuth,
+  // editPostId,
+  // setEditPostId
+}) {
   const [postList, setPostList] = useState([]);
   const postsCollectionServer = collection(db, 'posts');
 
@@ -15,14 +19,14 @@ function Home({ isAuth, editPostId, setEditPostId }) {
 
   const _editPage = (id) => {
     // console.log(`Move to ${id} edit page`);
-    setEditPostId(id);
+    // setEditPostId(id);
 
     // console.log(editPostId);
     window.location.pathname = '/edit';
   };
-  useEffect(() => {
-    console.log(editPostId);
-  });
+  // useEffect(() => {
+  //   console.log(editPostId);
+  // });
 
   useEffect(() => {
     const getPosts = async () => {
@@ -39,9 +43,9 @@ function Home({ isAuth, editPostId, setEditPostId }) {
   }, []);
   return (
     <div className="home main">
-      {postList.map((post) => {
+      {postList.map((post, index) => {
         return (
-          <div className="single-post-container">
+          <div key={index} className="single-post-container">
             <div className="single-post-title">
               <h2>{post.title}</h2>
             </div>
