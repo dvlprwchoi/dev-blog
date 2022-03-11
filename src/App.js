@@ -12,7 +12,6 @@ import Edit from './components/Edit/Edit';
 
 function App() {
   const [isAuth, setIsAuth] = useState(localStorage.getItem('isAuth'));
-  // const [editPostId, setEditPostId] = useState([]);
 
   const _logout = () => {
     signOut(auth).then(() => {
@@ -40,33 +39,14 @@ function App() {
           isDark={isDark}
         />
         <Routes>
-          <Route
-            exact
-            path="/"
-            element={
-              <Home
-                isAuth={isAuth}
-                // editPostId={editPostId}
-                // setEditPostId={setEditPostId}
-              />
-            }
-          />
+          <Route exact path="/" element={<Home isAuth={isAuth} />} />
           <Route
             exact
             path="/login"
             element={<Login setIsAuth={setIsAuth} />}
           />
           <Route exact path="/create" element={<Create isAuth={isAuth} />} />
-          <Route
-            exact
-            path="/edit"
-            element={
-              <Edit
-                isAuth={isAuth}
-                // editPostId={editPostId}
-              />
-            }
-          />
+          <Route path="/edit/:id" element={<Edit isAuth={isAuth} />} />
         </Routes>
       </Router>
       <Footer />
