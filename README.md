@@ -1,6 +1,6 @@
 # DEV BLOG
 
-DEV BLOG is a developer's blog platform. A user can login with a Gmail account. Once user is logged into the DEV BLOG, user can create and delete own blog posts.
+DEV BLOG is a developer's blog platform. Users can login with their Gmail accounts. Once users are logged into the DEV BLOG, they can create, edit and delete their own blog posts.
 
 # Previews
 
