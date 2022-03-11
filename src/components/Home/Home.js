@@ -3,7 +3,7 @@ import { collection, deleteDoc, doc, getDocs } from 'firebase/firestore';
 import { auth, db } from '../../firebase-config';
 import './Home.css';
 
-function Home({ isAuth }) {
+function Home({ isAuth, editPostId, setEditPostId }) {
   const [postList, setPostList] = useState([]);
   const postsCollectionServer = collection(db, 'posts');
 
@@ -13,12 +13,16 @@ function Home({ isAuth }) {
     window.location.pathname = '/';
   };
 
-  const _editPage = async (id) => {
-    // const findPostById = doc(db, 'posts', id);
-    console.log(`Move to ${id} edit page`);
+  const _editPage = (id) => {
+    // console.log(`Move to ${id} edit page`);
+    setEditPostId(id);
 
+    // console.log(editPostId);
     window.location.pathname = '/edit';
   };
+  useEffect(() => {
+    console.log(editPostId);
+  });
 
   useEffect(() => {
     const getPosts = async () => {
