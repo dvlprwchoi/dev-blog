@@ -19,6 +19,16 @@
   display: none;
 } */
 
+.single-post-img-div {
+  display: flex;
+  justify-content: center;
+}
+
+.single-post-img {
+  width: 95%;
+  border-radius: 1rem 0.5rem;
+}
+
 .single-post-text {
   word-wrap: break-word;
   /* height: auto; */
