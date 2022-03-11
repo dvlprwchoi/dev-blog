@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { collection, deleteDoc, doc, getDocs } from 'firebase/firestore';
 import { auth, db } from '../../firebase-config';
 import './Home.css';
+import { Link } from 'react-router-dom';
 
 function Home({ isAuth }) {
   const [postList, setPostList] = useState([]);
@@ -13,10 +14,10 @@ function Home({ isAuth }) {
     window.location.pathname = '/';
   };
 
-  const _editPage = (id) => {
-    // console.log(`Move to ${id} edit page`);
-    window.location.pathname = `/edit/${id}`;
-  };
+  // const _editPage = (id) => {
+  //   // console.log(`Move to ${id} edit page`);
+  //   window.location.pathname = `/edit/${id}`;
+  // };
 
   useEffect(() => {
     const getPosts = async () => {
@@ -58,15 +59,18 @@ function Home({ isAuth }) {
               </div>
               <div className="edit-button-div">
                 {isAuth && post.authorId === auth.currentUser.uid && (
-                  <button
-                    className="edit-button icon"
-                    onClick={() => {
-                      _editPage(post.id);
-                      // console.log(post.id);
-                    }}
-                  >
-                    &#9998;
-                  </button>
+                  <Link to={`/edit/${post.id}`}>
+                    <button className="edit-button icon">&#9998;</button>
+                  </Link>
+                  // <button
+                  //   className="edit-button icon"
+                  //   onClick={() => {
+                  //     _editPage(post.id);
+                  //     // console.log(post.id);
+                  //   }}
+                  // >
+                  //   &#9998;
+                  // </button>
                 )}
               </div>
             </div>

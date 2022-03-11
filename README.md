@@ -91,7 +91,7 @@ Your site is now running at `http://localhost:3000`!
 
 - Add comment section
 - Add different color theme &#9989;
-- Add edit post
+- Add edit post &#9989;
 - Add delete confirmation
 - Add modal
 - Add restriction on blank submission
