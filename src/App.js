@@ -1,5 +1,10 @@
 import { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from 'react-router-dom';
 import './App.css';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
@@ -46,7 +51,8 @@ function App() {
             element={<Login setIsAuth={setIsAuth} />}
           />
           <Route exact path="/create" element={<Create isAuth={isAuth} />} />
-          <Route path="/edit/:id" element={<Edit isAuth={isAuth} />} />
+          <Route exact path="/edit/:id" element={<Edit isAuth={isAuth} />} />
+          <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </Router>
       <Footer />
