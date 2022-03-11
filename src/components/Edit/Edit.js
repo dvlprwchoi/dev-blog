@@ -19,11 +19,11 @@ function Edit({ isAuth }) {
     const _fetchData = async () => {
       const editPostSnap = await getDoc(editPostRef);
       const editPostData = editPostSnap.data();
-      if (editPostSnap.exists()) {
-        console.log('Item data:', editPostData);
-      } else {
-        console.log('No such item!');
-      }
+      // if (editPostSnap.exists()) {
+      //   console.log('Item data:', editPostData);
+      // } else {
+      //   console.log('No such item!');
+      // }
       setForm(editPostData);
     };
     _fetchData();
