@@ -95,7 +95,8 @@
 }
 
 .input-title-div,
-.input-text-div {
+.input-text-div,
+.input-img-div {
   color: var(--color-3);
   display: flex;
   flex-direction: column;
