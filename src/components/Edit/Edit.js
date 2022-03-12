@@ -2,10 +2,12 @@ import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { db } from '../../firebase-config';
 import { doc, getDoc, updateDoc } from 'firebase/firestore';
+import FileBase64 from 'react-file-base64';
 
 function Edit({ isAuth }) {
   const [form, setForm] = useState({
     title: '',
+    img: '',
     postText: '',
   });
 
@@ -46,6 +48,7 @@ function Edit({ isAuth }) {
     e.preventDefault();
     const editedPost = {
       title: form.title,
+      img: form.img,
       postText: form.postText,
     };
 
@@ -70,6 +73,19 @@ function Edit({ isAuth }) {
               value={form.title}
               required
               onChange={(e) => _updateForm({ title: e.target.value })}
+            />
+          </div>
+          <div className="input-img-div">
+            <p className="label-for-post-img">Image:</p>
+            <img
+              src={form.img}
+              alt={`Image of ${form.title}`}
+              style={{ width: '50%' }}
+            />
+            <FileBase64
+              className="post-img-input-box"
+              multiple={false}
+              onDone={({ base64 }) => _updateForm({ img: base64 })}
             />
           </div>
           <div className="input-text-div">
