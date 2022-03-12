@@ -37,6 +37,9 @@ function Home({ isAuth }) {
       {postList.map((post, index) => {
         return (
           <div key={index} className="single-post-container">
+            <div className="single-post-img-div">
+              <img className="single-post-img" src={post.img} />
+            </div>
             <div className="single-post-title">
               <h2>{post.title}</h2>
             </div>

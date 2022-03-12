@@ -1,6 +1,6 @@
 # DEV BLOG
 
-DEV BLOG is a developer's blog platform. Users can login with their Gmail accounts. Once users are logged into the DEV BLOG, they can create, edit and delete their own blog posts.
+DEV BLOG is a developer's blog platform. Users can login with their Gmail accounts. Once users are logged into the DEV BLOG, they can create, edit and delete their own blog posts. Users also can upload image files to posts.
 
 # Previews
 
@@ -96,5 +96,6 @@ Your site is now running at `http://localhost:3000`!
 - Add modal
 - Add restriction on blank submission
 - Add sorting
-- Add uploading photo
+- Add uploading photo &#9989;
 - Add uploading url
+- Add feature that not showing alt text when img file is not existed
